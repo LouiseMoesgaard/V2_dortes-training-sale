@@ -1,0 +1,178 @@
+/* Variables */
+
+:root {
+  --body-color: #f9f8f7;
+  --primary-color: #fd9c50;
+  --secondary-color: #355657;
+  --footer-color: #034d5a;
+  --header-font: "Merriweather", serif;
+  --body-font: "Raleway", sans-serif;
+  --text-white: #fff;
+  --text-dark: #45494b;
+  --line-height-h2: 36px;
+}
+
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-color);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  text-transform: uppercase;
+  font-size: var(--header-font);
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+p,
+li,
+span {
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: var(--line-height-h2);
+  color: var(--text-dark);
+}
+
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 36px;
+}
+
+/* Buttons */
+
+button {
+  width: fit-content;
+  height: fit-content;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.primary-button {
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+}
+
+.secondary-button {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+/* Container */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--footer-color);
+  color: var(--text-white);
+  padding-block: 60px;
+  margin-top: 15vh;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 6vh;
+  align-items: start;
+  justify-items: center;
+}
+
+footer .links li {
+  list-style: none;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+footer .contact,
+footer .address {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .address *,
+footer .contact * {
+  margin-bottom: 20px;
+}
+
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+footer .secondary-button a {
+  color: var(--primary-color);
+}
+
+/* Header */
+
+nav {
+  margin-top: 2vh;
+  height: 10vh;
+}
+
+/* Classes */
+
+.line {
+  height: 2px;
+  background-color: var(--primary-color);
+}

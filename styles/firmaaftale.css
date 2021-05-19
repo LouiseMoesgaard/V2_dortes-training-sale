@@ -1,0 +1,98 @@
+.firma_title {
+  margin-bottom: 6vh;
+}
+.firma_wrapper .div_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.firma_wrapper .div_text {
+  padding: 50px;
+  background-color: var(--secondary-color);
+}
+
+.firma_wrapper p {
+  color: var(--text-white);
+}
+
+.firma_wrapper img {
+  height: 100%;
+}
+
+.firma_wrapper figure {
+  margin: 0;
+  height: 100%;
+}
+
+.firma_wrapper .line {
+  width: 20%;
+}
+
+.prices_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 6vw auto;
+  justify-items: center;
+  text-align: center;
+}
+
+.twin ul {
+  text-align: start;
+}
+
+.twin h3 {
+  background-color: #96cbcd;
+  padding: 30px;
+}
+
+.twin:nth-child(2) h3 {
+  background-color: var(--primary-color);
+}
+
+.twin span {
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.twin .line {
+  border-bottom: 2px solid var(--primary-color);
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.twin li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.contact_wrapper {
+  text-align: center;
+  line-height: 40px;
+}
+
+.fordele_wrapper .h2_bg {
+  background-color: var(--secondary-color);
+  padding: 30px;
+  color: var(--text-white);
+  text-align: center;
+  margin-top: 8vh;
+}
+
+.fordele_wrapper .container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8vh;
+}
+
+.fordele_wrapper .line {
+  height: 2px;
+  background-color: var(--primary-color);
+  width: 80%;
+  margin-bottom: 4vh;
+}
+
+.fordele_wrapper li {
+  margin-bottom: 10px;
+  list-style: none;
+}
