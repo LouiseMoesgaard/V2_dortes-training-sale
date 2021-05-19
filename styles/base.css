@@ -163,16 +163,13 @@ footer .secondary-button a {
   color: var(--primary-color);
 }
 
-/* Header */
-
-nav {
-  margin-top: 2vh;
-  height: 10vh;
-}
-
 /* Classes */
 
 .line {
   height: 2px;
   background-color: var(--primary-color);
+}
+
+.hide {
+  display: none!important;
 }

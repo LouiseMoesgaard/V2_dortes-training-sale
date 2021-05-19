@@ -1,0 +1,103 @@
+nav {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    padding: 5px 35px 0 35px;
+    z-index: 5
+}
+nav .logo {
+    height: 60px;
+    width: 200px;
+    display: inline-block;
+}
+nav .burger{
+    width: 38px;
+    height: 21px;
+    display: inline-block;
+    position: fixed;
+    right: 35px;
+    top: 25px;
+}
+nav .burger .line {
+    height: 3px;
+    background-color: white;
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+nav .burger .line:nth-child(2n){
+    margin: 5px 0 5px 0;
+}
+
+nav .burger.close .line {
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    
+}
+nav .burger.close .line:first-child {
+    transform: rotate(-45deg);
+}
+nav .burger.close .line:nth-child(2n) {
+    display: none;
+}
+nav .burger.close .line:last-child {
+    transform: rotate(45deg);
+}
+nav .menu {
+    margin: 0;
+    height: 667px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    top: 68px;
+    padding: 0 35px 0 35px;
+    background-color: #034d5a;
+}
+nav .menu a {
+    position: relative;
+    display: block;
+    color: #fef5f4;
+    line-height: 75px;
+    width: max-content;
+    font-family: "Merriweather";
+    margin: 5px 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav .menu .active {
+    border-bottom: 3px solid;  
+    line-height: 50px;         
+    border-image: linear-gradient(to right, transparent 10%, #fd9c50 10%) 2;
+}
+nav .menu.desktop {
+    top: 5px;
+    display: inline-block;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    vertical-align: top;
+}
+nav .menu.desktop .active {
+    border-bottom: 3px solid;  
+    line-height: 35px;         
+    border-image: linear-gradient(to right, transparent 10%, #fd9c50 10%) 2;
+}
+nav .menu.desktop a {
+    display: inline-block;
+    line-height: 60px;
+    padding: 0;
+    margin: 0 30px;
+    right: 35px;
+    color: #45494b;
+}
+
+.nav-green {
+    background-color: #034d5a;
+}
+
+.nav-white {
+    background-color: white;
+}
