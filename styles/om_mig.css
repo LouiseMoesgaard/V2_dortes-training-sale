@@ -4,10 +4,15 @@
 }
 
 .col_2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   background-color: var(--footer-color);
   color: var(--text-white);
+}
+
+.div_text,
+.div_img {
+  flex-grow: 1;
+  flex-basis: 300px;
 }
 
 .col_2 img {
@@ -16,20 +21,20 @@
 
 .col_2 figure {
   margin: 0;
+  height: 100%;
 }
 
 .col_2 .div_text {
-  padding: 60px;
+  padding: 50px;
   display: grid;
-}
-
-.col_2 .div_text:last-child {
-  justify-self: flex-end;
+  justify-items: end;
 }
 
 .values_wrapper .div_content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--secondary-color);
+  padding: var(--padding-inline-mobil);
 }
 
 .values_wrapper img {
@@ -38,14 +43,14 @@
 
 .values_wrapper .div_text p {
   background-color: var(--footer-color);
-  padding: 30px;
+  padding-inline: 30px;
   color: var(--text-white);
-  margin-bottom: 4vh;
+  /* margin-bottom: 4vh; */
 }
 
 .values_wrapper li {
-  list-style: none;
   margin-bottom: 10px;
+  color: var(--text-white);
 }
 
 .cv_content {
@@ -59,12 +64,77 @@
   color: var(--text-white);
 }
 
-.cv_list {
-  padding: 50px;
-}
-
 .cv_list li {
-  list-style: none;
   margin-bottom: 10px;
   line-height: 22px;
+}
+
+@media screen and (max-width: 450px) {
+  .om_mig_wrapper {
+    padding: var(--padding-inline-mobil);
+    margin-bottom: 0;
+  }
+
+  .col_2 {
+    flex-direction: column-reverse;
+    background-color: var(--body-color);
+    color: var(--text-dark);
+  }
+
+  .col_2 .div_text {
+    padding: 0;
+    margin-top: -50px;
+  }
+
+  .cv_wrapper {
+    padding: var(--padding-inline-mobil);
+  }
+
+  .cv_content {
+    grid-template-columns: auto;
+  }
+
+  .cv_text p {
+    background-color: var(--body-color);
+    color: var(--text-dark);
+    padding: 0;
+  }
+
+  .cv_list ul {
+    padding: 0;
+  }
+
+  .values_wrapper {
+    background-color: var(--secondary-color);
+    margin-bottom: 0;
+    padding: var(--padding-inline-mobil);
+  }
+
+  .values_wrapper .div_content {
+    grid-template-columns: auto;
+    padding: 0;
+  }
+
+  .values_wrapper figure {
+    width: 100%;
+    margin: auto;
+  }
+
+  .values_wrapper .div_text p {
+    padding: 0;
+  }
+
+  .values_wrapper ul {
+    padding: 0;
+  }
+
+  .values_wrapper h2,
+  .values_wrapper li {
+    color: var(--text-white);
+  }
+
+  .values_wrapper h2,
+  .om_mig_wrapper h2 {
+    margin-bottom: 4vh;
+  }
 }

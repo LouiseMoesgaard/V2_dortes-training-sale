@@ -81,3 +81,8 @@ trainings.forEach((object) =>{
         })
     })
  }
+
+
+
+
+
