@@ -104,4 +104,8 @@ footer .btn_mobil {
   footer .btn_desktop {
     display: none;
   }
+
+  footer .copyright {
+    padding-inline: var(--padding-inline-mobil);
+  }
 }

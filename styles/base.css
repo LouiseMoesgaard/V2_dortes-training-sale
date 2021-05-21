@@ -13,6 +13,7 @@
   --line-height-h2: 36px;
   --border-color-grey: #c6cdcd;
   --padding-inline-mobil: 30px;
+  --li-marker-color: #c6cdcd;
 }
 
 /* General */
@@ -82,6 +83,23 @@ p {
     font-size: 1rem;
     margin-bottom: 0;
   }
+}
+
+ul li::marker {
+  color: var(--li-marker-color);
+  font-size: 200%;
+}
+
+.li_dot li {
+  list-style: none;
+}
+.li_dot li::before {
+  content: "xx";
+  color: transparent;
+  background-color: var(--li-marker-color);
+  margin-right: 8px;
+  border-radius: 50%;
+  font-size: 10px;
 }
 
 /* Buttons */
