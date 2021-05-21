@@ -18,8 +18,8 @@ function displayPost(data){
 function getTrainingsform(trainings){
     console.log("this is training: ", trainings);
     const trainingsWrapper = document.querySelector(".trainings_wrapper");
-trainingsWrapper.innerHTML = "";
-const template = document.querySelector(".trainings_template");
+    trainingsWrapper.innerHTML = "";
+    const template = document.querySelector(".trainings_template");
 
 trainings.forEach((object) =>{
     const clon = template.cloneNode(true).content;
@@ -27,11 +27,14 @@ trainings.forEach((object) =>{
     clon.querySelector("p").textContent = object.short_text;
     clon.querySelector("img").src = object.image_home.guid;
 
-    clon.querySelector("button").textContent = "Læs mere";
-    clon.querySelector("button").addEventListener("click", (evt)=>{
-        console.log(evt.target.innerHTML);
-        console.log(object.id);
-        location.href = "/html/singleview.html?id=" + object.id;
+    clon.querySelectorAll("button").forEach((button) =>{
+        button.textContent = "Læs mere";
+    })
+
+    clon.querySelectorAll("button").forEach((button) =>{
+        button.addEventListener("click", () =>{
+            location.href = "/html/singleview.html?id=" + object.id; 
+        })
     })
     trainingsWrapper.appendChild(clon);
 })
@@ -40,14 +43,14 @@ trainings.forEach((object) =>{
 function showTrainingDetails(trainings){
     console.log(trainings);
 
-const trainingsWrapper = document.querySelector("main");
-trainingsWrapper.innerHTML = "";
-const template = document.querySelector(".training_template");
+    const trainingsWrapper = document.querySelector("main");
+    trainingsWrapper.innerHTML = "";
+    const template = document.querySelector(".training_template");
 
 trainings.forEach((object) =>{
     if(id == object.id){
         const clon = template.cloneNode(true).content;
-        clon.querySelector("h2").textContent = object.training_title;
+        clon.querySelector(".h1_line").textContent = object.training_title;
         // clon.querySelector(".sm-txt").textContent = object.short_text;
         clon.querySelector(".lg-txt").textContent = object.long_text;
         clon.querySelector(".img1").src = object.image_home.guid;
@@ -59,3 +62,22 @@ trainings.forEach((object) =>{
 }) 
 }
 
+ function getFqaList(fqaList){
+    console.log("fqaList is: ", fqaList);
+    const fqaWrapper = document.querySelector(".fqa-section");
+    fqaWrapper.innerHTML = "";
+    const template = document.querySelector(".fqa-container");
+
+    fqaList.forEach((object)=>{
+        const clon = template.cloneNode(true).content;
+        clon.querySelector(".fqa-h2").textContent = object.question;
+        clon.querySelector(".fqa-p").innerHTML = object.answer;
+        fqaWrapper.appendChild(clon);
+    })
+
+    document.querySelectorAll(".fqa-item").forEach(elm =>{
+        elm.addEventListener("click", ()=>{
+            elm.classList.toggle("fqa-collapse");
+        })
+    })
+ }

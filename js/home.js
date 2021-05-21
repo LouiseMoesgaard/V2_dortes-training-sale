@@ -25,7 +25,7 @@ function displayPostHome(post){
     post.forEach((elm) =>{
         if(elm.id == 96){
          const homePost = elm.content.rendered;
-         document.querySelector(".main_home").innerHTML = homePost; 
+         document.querySelector("main").innerHTML = homePost; 
         }
      })
 }

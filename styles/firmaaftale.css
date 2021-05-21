@@ -1,6 +1,3 @@
-.firma_title {
-  margin-bottom: 6vh;
-}
 .firma_wrapper .div_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -31,6 +28,7 @@
 .prices_wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
   margin: 6vw auto;
   justify-items: center;
   text-align: center;
@@ -77,22 +75,107 @@
   color: var(--text-white);
   text-align: center;
   margin-top: 8vh;
+  width: 100%;
+  border: none;
 }
 
 .fordele_wrapper .container {
-  display: flex;
-  justify-content: space-evenly;
   margin-top: 8vh;
-}
-
-.fordele_wrapper .line {
-  height: 2px;
-  background-color: var(--primary-color);
-  width: 80%;
-  margin-bottom: 4vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
 .fordele_wrapper li {
   margin-bottom: 10px;
   list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+  .twin h3 {
+    font-size: 14px;
+  }
+
+  .twin h4 {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  .fordele_wrapper .container {
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .fordele_wrapper h2 {
+    width: 65%;
+  }
+
+  .fordele_wrapper ul {
+    padding: 0;
+  }
+
+  .fordele_wrapper .container div {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .firma_wrapper {
+    background-color: var(--secondary-color);
+  }
+  .h1_line {
+    color: var(--text-white);
+  }
+
+  .firma_wrapper .div_grid {
+    grid-template-columns: auto;
+  }
+
+  .firma_wrapper .div_text {
+    padding: var(--padding-inline-mobil);
+  }
+  .firma_wrapper figure {
+    height: 85%;
+    padding-inline: var(--padding-inline-mobil);
+  }
+  .prices_wrapper {
+    grid-template-columns: auto;
+    margin: 24px 0;
+  }
+
+  .twin {
+    width: 90%;
+    margin-bottom: 5vh;
+  }
+  .twin h4 {
+    height: auto;
+  }
+
+  .fordele_wrapper .container {
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+  }
+
+  .fordele_wrapper h2 {
+    width: auto;
+  }
+
+  .page_grid {
+    display: grid;
+  }
+
+  .firma_wrapper {
+    grid-area: 1/1/2/2;
+  }
+
+  .fordele_wrapper {
+    grid-area: 2/1/3/2;
+  }
+
+  .fordele_wrapper .h2_bg {
+    display: none;
+  }
 }

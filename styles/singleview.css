@@ -3,11 +3,6 @@
   grid-template-columns: 70% 30%;
 }
 
-.training_content .line {
-  margin-bottom: 4vh;
-  width: 20%;
-}
-
 .col_text {
   background-color: var(--footer-color);
   padding: 44px;
@@ -58,4 +53,56 @@
 
 .form button {
   padding: 10px 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .training_content {
+    grid-template-columns: auto;
+  }
+
+  .form {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  article h2 {
+    margin-bottom: 0;
+    padding-inline: var(--padding-inline-mobil);
+  }
+
+  .training_content {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .form {
+    display: block;
+    background-color: var(--body-color);
+    color: var(--text-dark);
+  }
+
+  .form h2 {
+    color: var(--text-dark);
+    margin-bottom: 4vh;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--border-color-grey);
+  }
+
+  .form .primary-button {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+  }
+
+  .col_text {
+    background-color: var(--body-color);
+    color: var(--text-dark);
+    padding: 30px;
+  }
 }

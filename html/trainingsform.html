@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="../styles/trainingsform.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 <body>
     <header>
@@ -30,60 +31,61 @@
                 <a href="/html/om_mig.html">Om mig</a>
                 <a href="/html/faq.html">FAQ</a>
                 <a href="/html/kontakt.html">Kontakt</a>
-                <a href="/html/logind.html">Log ind</a>
+                <a href="">Log ind</a>
             </div>
         </nav>
     </header>
 
 
-    <main class="trainings_main container">
+    <main class="container m_top_page">
         <div class="trainings_title">
-            <h2 class="">En lille overskrift der skal virke</h2>
-            <span></span>
+            <h1 class="h1_line">En lille overskrift der skal virke</h1>
         </div>
-
-        <div class="trainings_wrapper container"></div>
+        <div class="trainings_wrapper"></div>
     </main>
     
 
     <template class="trainings_template">
         <article>
-            <img src="">
-            <div>
-                <h2></h2>
-                <span></span>
+            <div class="training_image">
+                <img src="">
+                <button class="secondary-button btn_mobil"></button>
+            </div>
+           
+            <div class="training_text">
+                <h2 class="header_2"></h2>
                 <p></p>
-                <button class="secondary-button">button</button>
+                <button class="secondary-button btn_desktop"></button>
             </div>
         </article>
     </template>
   
    
-
-  <footer>
-      <div class="container">
-          <div class="links">
-            <ul>
-                <li><a href="/index.html">forside</a></li>
-                <li><a href="/html/trainingsform.html">træningsformer</a></li>
-                <li><a href="/html/firmaaftale.html">firmaaftale</a></li>
-                <li><a href="/html/om_mig.html">om mig</a></li>
-                <li><a href="/html/faq.html">faq</a></li>
-                <li><a href="/html/kontakt.html">kontakt</a></li>
-            </ul>
+    <footer>
+        <button class="secondary-button btn_mobil"><a href="">Log ind</a></button>
+          <div class="container">
+              <div class="links">
+                  <ul>
+                      <li><a href="/index.html">forside</a></li>
+                      <li><a href="/html/trainingsform.html">træningsformer</a></li>
+                      <li><a href="/html/firmaaftale.html">firmaaftale</a></li>
+                      <li><a href="/html/om_mig.html">om mig</a></li>
+                      <li><a href="/html/faq.html">faq</a></li>
+                      <li><a href="/html/kontakt.html">kontakt</a></li>
+                  </ul>
+              </div>
+              <div class="contact">
+                  <button class="secondary-button btn_desktop"><a href="">Log ind</a></button>
+                  <span>mailmail@mail.com</span>
+                  <span>+45 66 66 66 66</span>
+              </div>
+              <div class="address">
+                  <span>Nyvang 7, 4000 Roskilde</span>
+                  <span>CVR: 111111</span>
+              </div>
           </div>
-          <div class="contact">
-            <button class="secondary-button"><a href="/html/logind.html">Log ind</a></button>
-            <span>mailmail@mail.com</span>
-              <span>+45 66 66 66 66</span>
-          </div>
-          <div class="address">
-              <span>Nyvang 7, 4000 Roskilde</span>
-              <span>CVR: 111111</span>
-          </div>
-      </div>
-      <div class="copyright"><span>copyright© 2021 - konsulentfirma Dorte Ernst</span></div>
-  </footer>
+          <div class="copyright"><span>copyright© 2021 - konsulentfirma Dorte Ernst</span></div>
+    </footer>
   
     <script src="/js/pages.js"></script>
     <script>

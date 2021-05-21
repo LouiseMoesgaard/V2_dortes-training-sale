@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorte's Training - singleview</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/singleview.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 <body>
 
@@ -29,12 +32,12 @@
                 <a href="/html/om_mig.html">Om mig</a>
                 <a href="/html/faq.html">FAQ</a>
                 <a href="/html/kontakt.html">Kontakt</a>
-                <a href="/html/logind.html">Log ind</a>
+                <a href="">Log ind</a>
             </div>
         </nav>
     </header>
 
-    <div class="training_content container">
+    <div class="training_content container m_top_page">
         <main></main>
         <aside class="form">
             <h2>Spørgsmål</h2>
@@ -65,8 +68,7 @@
 
     <template class="training_template">
         <article>
-            <h2></h2>
-            <div class="line"></div>
+            <h1 class="h1_line"></h1>
             <div class="col_text">
                 <p class="sm-txt"></p>
                 <p class="lg-txt"></p>
@@ -80,28 +82,29 @@
     </template>
 
     <footer>
-        <div class="container">
-            <div class="links">
-                <ul>
-                    <li><a href="/index.html">forside</a></li>
-                    <li><a href="/html/trainingsform.html">træningsformer</a></li>
-                    <li><a href="/html/firmaaftale.html">firmaaftale</a></li>
-                    <li><a href="/html/om_mig.html">om mig</a></li>
-                    <li><a href="/html/faq.html">faq</a></li>
-                    <li><a href="/html/kontakt.html">kontakt</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <button class="secondary-button"><a href="/html/logind.html">Log ind</a></button>
-                <span>mailmail@mail.com</span>
-                <span>+45 66 66 66 66</span>
-            </div>
-            <div class="address">
-                <span>Nyvang 7, 4000 Roskilde</span>
-                <span>CVR: 111111</span>
-            </div>
-        </div>
-        <div class="copyright"><span>copyright© 2021 - konsulentfirma Dorte Ernst</span></div>
+        <button class="secondary-button btn_mobil"><a href="">Log ind</a></button>
+          <div class="container">
+              <div class="links">
+                  <ul>
+                      <li><a href="/index.html">forside</a></li>
+                      <li><a href="/html/trainingsform.html">træningsformer</a></li>
+                      <li><a href="/html/firmaaftale.html">firmaaftale</a></li>
+                      <li><a href="/html/om_mig.html">om mig</a></li>
+                      <li><a href="/html/faq.html">faq</a></li>
+                      <li><a href="/html/kontakt.html">kontakt</a></li>
+                  </ul>
+              </div>
+              <div class="contact">
+                  <button class="secondary-button btn_desktop"><a href="">Log ind</a></button>
+                  <span>mailmail@mail.com</span>
+                  <span>+45 66 66 66 66</span>
+              </div>
+              <div class="address">
+                  <span>Nyvang 7, 4000 Roskilde</span>
+                  <span>CVR: 111111</span>
+              </div>
+          </div>
+          <div class="copyright"><span>copyright© 2021 - konsulentfirma Dorte Ernst</span></div>
     </footer>
 
     <script src="/js/pages.js"></script>
