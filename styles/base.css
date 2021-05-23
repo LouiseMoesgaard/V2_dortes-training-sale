@@ -185,3 +185,44 @@ button {
 .m_top_page {
   margin-top: 10vh;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: auto;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_modal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 35% auto;
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  width: 80vw;
+  height: 50%;
+}
+
+.form_modal .m_text {
+  justify-self: center;
+  grid-area: 2/1/3/4;
+  padding-inline: var(--padding-inline-mobil);
+}
+
+.form_modal .m_close {
+  font-size: 2rem;
+  cursor: pointer;
+  justify-self: end;
+  grid-area: 1/3/2/4;
+  margin: 2rem;
+}
+
+.noscroll {
+  overflow: hidden;
+}
