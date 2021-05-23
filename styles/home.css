@@ -98,6 +98,14 @@
   color: var(--text-dark);
 }
 
+.list_wrapper ul li::before {
+  content: "bb";
+  color: transparent;
+  background-color: var(--li-marker-color);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
 @media screen and (max-width: 700px) {
   .splash_wrapper h1 {
     font-size: 25px;

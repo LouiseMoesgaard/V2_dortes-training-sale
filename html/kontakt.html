@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/kontakt.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/footer.css">
 </head>
@@ -35,9 +36,17 @@
         </nav>
     </header>
 
+<div class="overlay hide">
+    <div class="form_modal hide">
+        <span class="m_close">✗</span>
+        <h3 class="m_text">Din besked er blevet sendt</h3>
+    </div>
+</div>
 
   
-    <main class=""></main>
+    <div class="kontakt_content container m_top_page">
+        <main></main>
+    </div>
 
     <footer>
         <button class="secondary-button btn_mobil"><a href="">Log ind</a></button>
@@ -64,6 +73,11 @@
           </div>
           <div class="copyright"><span>copyright© 2021 - konsulentfirma Dorte Ernst</span></div>
     </footer>
+
+    <script src="/js/pages.js"></script>
+    <script>
+        window.addEventListener("load", getPost("posts/297", displayPost));
+    </script>
   <script src="/js/nav.js"></script>
 </body>
 </html>

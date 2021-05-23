@@ -12,6 +12,7 @@ function getPost(endpoint, callback){
 function displayPost(data){
     console.log(data);
     document.querySelector("main").innerHTML = data.content.rendered;
+    submitForm();
 }
 
 
@@ -60,6 +61,8 @@ trainings.forEach((object) =>{
 
     }
 }) 
+
+submitForm();
 }
 
  function getFqaList(fqaList){
@@ -79,5 +82,44 @@ trainings.forEach((object) =>{
         elm.addEventListener("click", ()=>{
             elm.classList.toggle("fqa-collapse");
         })
+    })
+ }
+
+
+ function submitForm(){
+
+   
+ const form = document.querySelector("form");
+     form.addEventListener("submit", (e)=>{
+         e.preventDefault();
+         document.querySelector("#name").value = " ";
+         document.querySelector("#firma").value = " ";
+         document.querySelector("#email").value = " ";
+         document.querySelector("#message").value = " ";
+ 
+         if(document.querySelector("#stilling")){
+            document.querySelector("#stilling").value = " "; 
+         }
+
+        
+         displayPopup();
+     })
+ }
+
+ function displayPopup(){
+    window.scrollTo(0, 0);
+     const overlay = document.querySelector(".overlay");
+     const modal = document.querySelector(".form_modal");
+     const body = document.querySelector("body");
+     const closeBtn = document.querySelector(".m_close");
+
+     overlay.classList.remove("hide");
+     modal.classList.remove("hide");
+     body.classList.add("noscroll");
+     
+    closeBtn.addEventListener("click", ()=>{
+        overlay.classList.add("hide");
+        modal.classList.add("hide");
+        body.classList.remove("noscroll");
     })
  }
