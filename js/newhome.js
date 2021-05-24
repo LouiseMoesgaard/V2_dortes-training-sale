@@ -32,6 +32,10 @@ function displayHome(data){
     document.querySelector(".cta_home").textContent = splash.cta;
     document.querySelector(".list_title h2").textContent = splash.ul_title;
     document.querySelector(".list").innerHTML = splash.list_4_items;
+
+    document.querySelector(".cta_home").addEventListener("click", ()=>{
+        window.location= "/html/firmaaftale.html";
+    })
 }
 
 
