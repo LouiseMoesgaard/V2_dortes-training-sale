@@ -54,6 +54,7 @@
 @media screen and (max-width: 450px) {
   .fqa-section {
     width: 90%;
+    margin-top: 4vh;
   }
 
   .fqa-item {
@@ -66,7 +67,11 @@
 
   .fqa-p,
   .fqa-p p {
-    margin-block: 0;
+    margin-block: inherit;
     width: 100%;
+  }
+
+  .fqa-collapse .triangle {
+    margin-top: 20px;
   }
 }
