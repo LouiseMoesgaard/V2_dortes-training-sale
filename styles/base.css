@@ -77,6 +77,8 @@ p {
     padding: var(--padding-inline-mobil);
     margin-bottom: 0;
     width: 90%;
+    font-size: 18px;
+    line-height: 30px;
   }
 
   h2 {
@@ -183,7 +185,7 @@ button {
 /* temporal css */
 
 .m_top_page {
-  margin-top: 10vh;
+  margin-top: 16vh;
 }
 
 .overlay {
@@ -225,4 +227,45 @@ button {
 
 .noscroll {
   overflow: hidden;
+}
+
+.loader_wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  top: 0;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #034d5a;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
