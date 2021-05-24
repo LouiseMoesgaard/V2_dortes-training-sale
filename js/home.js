@@ -1,5 +1,5 @@
 "use strict";
-
+let references = null
 window.addEventListener("load", fetchData);
 
 function fetchData(){
@@ -17,8 +17,9 @@ async function getAllEndpoints(endpointsArray, callback) {
 
 function getHomeContent(data){
     displayPostHome(data[0]);
-    displayReference(data[1]);
+    references = data[1];
     displayTrainings(data[2]);
+    initializeCarousel();
 }
 
 function displayPostHome(post){
@@ -30,18 +31,14 @@ function displayPostHome(post){
      })
 }
 
-function displayReference(references){
-    console.log("this is references", references);
-    const referenceWrapper = document.querySelector(".references_wrapper");
+function displayReference(object){
+    const referenceWrapper = document.querySelector(".references_wrapper .reference");
     referenceWrapper.innerHTML = "";
     const template = document.querySelector(".references_template");
-    references.forEach((object) =>{
         const clon = template.cloneNode(true).content; 
         clon.querySelector("p").textContent = object.text_1;
         clon.querySelector("h2").textContent = object.person_name + ",   " + object.firma_name;
-
         referenceWrapper.appendChild(clon);
-    })
 }
 
 function displayTrainings(trainings){
