@@ -55,6 +55,10 @@
   padding: 10px 40px;
 }
 
+.carousel {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .training_content {
     grid-template-columns: auto;
@@ -80,6 +84,7 @@
     display: block;
     background-color: var(--body-color);
     color: var(--text-dark);
+    margin-top: 0;
   }
 
   .form h2 {
@@ -105,4 +110,42 @@
     color: var(--text-dark);
     padding: 30px;
   }
+
+  .col_img {
+    display: none;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4vh;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    top: 45%;
+    opacity: 1;
+    position: initial;
+  }
+
+  .carousel-control-next {
+    right: 16px;
+  }
+
+  .carousel-control-prev {
+    left: 16px;
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("/media/next-icon.svg");
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("/media/prev-icon.svg");
+  }
+
+  /* .carousel-item {
+    width: 80%;
+  } */
 }

@@ -12,12 +12,13 @@ function getPost(endpoint, callback){
 function displayPost(data){
     console.log(data);
     document.querySelector("main").innerHTML = data.content.rendered;
+    // setTimeout(hideLoader, 500);
+    hideLoader();
     submitForm();
 }
 
 
 function getTrainingsform(trainings){
-    console.log("this is training: ", trainings);
     const trainingsWrapper = document.querySelector(".trainings_wrapper");
     trainingsWrapper.innerHTML = "";
     const template = document.querySelector(".trainings_template");
@@ -39,10 +40,12 @@ trainings.forEach((object) =>{
     })
     trainingsWrapper.appendChild(clon);
 })
+
+// setTimeout(hideLoader, 500);
+hideLoader();
 }
 
 function showTrainingDetails(trainings){
-    console.log(trainings);
 
     const trainingsWrapper = document.querySelector("main");
     trainingsWrapper.innerHTML = "";
@@ -59,10 +62,16 @@ trainings.forEach((object) =>{
         clon.querySelector(".img3").src = object.image_3.guid;
         trainingsWrapper.appendChild(clon);
 
+        document.querySelector(".carousel-item .img1").src = object.image_home.guid;
+        document.querySelector(".carousel-item .img2").src = object.image_2.guid;
+        document.querySelector(".carousel-item .img3").src = object.image_3.guid;
+
     }
 }) 
 
 submitForm();
+// setTimeout(hideLoader, 500);
+hideLoader();
 }
 
  function getFqaList(fqaList){
@@ -83,12 +92,13 @@ submitForm();
             elm.classList.toggle("fqa-collapse");
         })
     })
+
+    // setTimeout(hideLoader, 500);
+    hideLoader();
  }
 
 
- function submitForm(){
-
-   
+ function submitForm(){  
  const form = document.querySelector("form");
      form.addEventListener("submit", (e)=>{
          e.preventDefault();
@@ -121,3 +131,8 @@ submitForm();
         body.classList.remove("noscroll");
     })
  }
+
+ function hideLoader(){
+   
+    document.querySelector(".loader_wrapper").classList.add("hide");
+}
