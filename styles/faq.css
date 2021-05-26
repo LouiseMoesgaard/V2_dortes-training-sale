@@ -1,6 +1,7 @@
 .fqa-section {
-  width: 80%;
+  width: 65%;
   margin: auto;
+  margin-top: 10vh;
 }
 
 .fqa-item {
@@ -11,18 +12,17 @@
   flex-direction: column;
 }
 
-.fqa-h2 {
+.fqa-header {
   margin-left: 2vw;
   border: none;
+  color: var(--text-dark);
+  font-size: 1rem;
+  align-self: center;
 }
 
 .fqa-p {
   width: 80%;
   margin: auto;
-}
-
-.fqa-p p {
-  margin-top: -12px;
 }
 
 .fqa-collapse p {
@@ -31,37 +31,37 @@
 }
 
 .fqa-collapse .triangle {
-  border-bottom: 16px solid transparent;
-  border-top: 16px solid var(--primary-color);
-  margin-top: 6px;
+  background-image: url(/media/fqa-triangle.svg);
 }
 
 .item-triangle {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  height: 65px;
 }
 .triangle {
-  margin-right: 25px;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-bottom: 16px solid var(--primary-color);
-  border-top: 16px solid transparent;
-  margin-top: -20px;
+  background-image: url(/media/fqa-triangle-collapse.svg);
+  width: 4rem;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-top: 24px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .fqa-section {
+    width: 90%;
+    margin-top: 8vh;
+  }
 }
 
 @media screen and (max-width: 450px) {
-  .fqa-section {
-    width: 90%;
-    margin-top: 4vh;
-  }
-
   .fqa-item {
-    padding-inline: 18px;
+    padding-inline: 12px;
   }
 
-  .fqa-h2 {
+  .fqa-header {
     margin-left: 0;
   }
 
@@ -73,5 +73,13 @@
 
   .fqa-collapse .triangle {
     margin-top: 20px;
+  }
+
+  .item-triangle {
+    height: 45px;
+  }
+
+  .triangle {
+    margin-right: -6px;
   }
 }

@@ -82,7 +82,7 @@ hideLoader();
 
     fqaList.forEach((object)=>{
         const clon = template.cloneNode(true).content;
-        clon.querySelector(".fqa-h2").textContent = object.question;
+        clon.querySelector(".fqa-header").textContent = object.question;
         clon.querySelector(".fqa-p").innerHTML = object.answer;
         fqaWrapper.appendChild(clon);
     })
