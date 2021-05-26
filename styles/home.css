@@ -76,17 +76,10 @@
   grid-area: legend;
 }
 
-<<<<<<< HEAD
 .references_wrapper .legend_wrapper .legend{
   height: 15px;
   width: 15px;
   border-radius: 15px;
-=======
-.references_wrapper .legend_wrapper .legend {
-  height: 20px;
-  width: 20px;
-  border-radius: 20px;
->>>>>>> 74853e5d5a8b5bf2284a09085e36d21d598687fd
   background-color: var(--border-color-grey);
   padding-inline: 0;
   border: 0;
