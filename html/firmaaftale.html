@@ -40,7 +40,47 @@
         <div class="loader"></div>
     </div>
 
-    <main class="m_top_page page_grid"></main>
+    <main class="m_top_page page_grid">
+        <div class="firma_wrapper container">
+            <div class="firma_title">
+                <h1 class="page_header h1_line"></h1>
+            </div>
+            <div class="div_grid">
+                <div class="div_text firma_text"></div>
+                <div class="div_img">
+                    <figure><img class="firma_img" src=""></figure>
+                </div>
+            </div>
+        </div>
+        <div class="prices_wrapper container"></div>
+        <div class="contact_wrapper container">
+        </div>
+        <div class="fordele_wrapper">
+            <h2 class="h2_bg fordele_header"></h2>
+            <div class="container">
+                <div>
+                    <h2 class="fordele_col1_header"></h2>
+                    <div class="fordele_col1_list"></div>
+                </div>
+                <div>
+                    <h2 class="fordele_col2_header"></h2>
+                    <div class="fordele_col2_list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <template class=" price_template">
+            <article class="twin">
+                <h3 class="price_name"></h3>
+                <h4 class="price_type"></h4>
+                <p class="price_number"></p>
+                <h4>/måned</h4>
+                <div class="line"></div>
+                <div class="price_list"></div>
+            </article>
+      
+        </template>
 
     <footer>
         <button class="secondary-button btn_mobil"><a href="">Log ind</a></button>
@@ -70,7 +110,7 @@
 
     <script src="/js/pages.js"></script>
     <script>
-        window.addEventListener("load", getPost("posts/118", displayPost));
+        getAllEndpoints(["firmaaftale", "price"], getFirmaaftale);
     </script>
     <script src="/js/nav.js"></script>
 </body>
