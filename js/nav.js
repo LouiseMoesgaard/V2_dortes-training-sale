@@ -32,7 +32,7 @@ function detectMobile() {
 }
 
 function setActive() {
-    console.log(navItems)
+    // console.log(navItems);
     let navItem = null;
     navItems.forEach(function(item){
         if(item.getAttribute("href") === window.location.pathname){

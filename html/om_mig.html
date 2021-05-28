@@ -40,7 +40,43 @@
         <div class="loader"></div>
     </div>
   
-    <main class="m_top_page"></main>
+    <!-- <main class="m_top_page"></main> -->
+
+    <main class="m_top_page">
+        <div class="container">
+            <div class="om_mig_wrapper">
+                <h2 class="om_mig_header"></h2>
+                <div class="col_2">
+                    <div class="div_text">
+                        <div class="om_mig_text"></div>
+                        <button class="secondary-button om_mig_cta"></button>
+                    </div>
+                    <div class="div_img">
+                        <figure><img class="om_mig_img" src=""></figure>
+                    </div>
+                </div>
+            </div>
+            <div class="values_wrapper">
+                <h2 class="values_header"></h2>
+                <div class="div_content">
+                    <div class="div_img">
+                        <figure><img class="values_img" src=""></figure>
+                    </div>
+                    <div class="div_text">
+                        <div class="values_text"></div>
+                        <div class="values_list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cv_wrapper">
+                <h2 class="cv_header"></h2>
+                <div class="cv_content">
+                    <div class="cv_text"></div>
+                    <div class="cv_list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <button class="secondary-button btn_mobil"><a href="">Log ind</a></button>
@@ -70,8 +106,8 @@
  
     <script src="/js/pages.js"></script>
     <script>
-        window.addEventListener("load", getPost("posts/116", displayPost));
-        window.addEventListener("load", getPost("posts/116", getOmMig));
+        // window.addEventListener("load", getPost("posts/116", displayPost));
+        window.addEventListener("load", getPost("om_mig", getOmMig));
     </script>
     <script src="/js/nav.js"></script>
 </body>

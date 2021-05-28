@@ -58,7 +58,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.cv_text p {
+.cv_text {
   background-color: var(--footer-color);
   padding: 40px;
   color: var(--text-white);
@@ -94,7 +94,7 @@
     grid-template-columns: auto;
   }
 
-  .cv_text p {
+  .cv_text {
     background-color: var(--body-color);
     color: var(--text-dark);
     padding: 0;

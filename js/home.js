@@ -1,26 +1,40 @@
 "use strict";
 let references = null;
 window.addEventListener("load", fetchData);
+// window.addEventListener("load",  getAllEndpoints(["home", "reference", "training"], getHomeContent));
+
+const url = "https://ariadna.dk/kea/Dortes-Training/wp/wp-json/wp/v2/";
 
 function fetchData(){
-    const url = "https://ariadna.dk/kea/Dortes-Training/wp/wp-json/wp/v2/";
-    const endpoint = [url + "home", url + "reference", url + "training"];
-    getAllEndpoints(endpoint, getHomeContent);
+    getAllEndpoints(["home", "reference", "training"], getHomeContent);
 }
 
-async function getAllEndpoints(endpointsArray, callback) {
+async function getAllEndpoints(endpoints, callback) {
+    const endpointsArray = endpoints.map(key => url + key);
     const data= await Promise.all(endpointsArray.map((endpoint) => fetch(endpoint)
      .then((response) => response.json())
      ));
      callback(data);
-   }
+}
+
+// function fetchData(){
+//     const url = "https://ariadna.dk/kea/Dortes-Training/wp/wp-json/wp/v2/";
+//     const endpoint = [url + "home", url + "reference", url + "training"];
+//     getAllEndpoints(endpoint, getHomeContent);
+// }
+
+// async function getAllEndpoints(endpointsArray, callback) {
+//     const data= await Promise.all(endpointsArray.map((endpoint) => fetch(endpoint)
+//      .then((response) => response.json())
+//      ));
+//      callback(data);
+//    }
 
 function getHomeContent(data){
     displayHome(data[0]);
     references = data[1];
     displayTrainings(data[2]);
     initializeCarousel();
-    // setTimeout(hideLoader, 500);
     hideLoader();
 }
 

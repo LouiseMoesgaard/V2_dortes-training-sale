@@ -34,16 +34,26 @@
   text-align: center;
 }
 
+.twin {
+  padding-inline: 20px;
+  width: 100%;
+}
+
 .twin ul {
   text-align: start;
 }
 
-.twin h3 {
+.twin li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.price_name {
   background-color: #96cbcd;
   padding: 30px;
 }
 
-.twin:nth-child(2) h3 {
+.twin:nth-child(2) .price_name {
   background-color: var(--primary-color);
 }
 
@@ -59,14 +69,14 @@
   margin-bottom: 30px;
 }
 
-.twin li {
-  margin-bottom: 10px;
-  list-style: none;
+.twin:nth-child(2) .line {
+  border-bottom: 2px solid #96cbcd;
 }
 
 .contact_wrapper {
   text-align: center;
   line-height: 40px;
+  color: var(--text-dark);
 }
 
 .fordele_wrapper .h2_bg {
@@ -147,11 +157,17 @@
   }
 
   .twin {
-    width: 90%;
+    /* width: 90%; */
     margin-bottom: 5vh;
+    padding-inline: var(--padding-inline-mobil);
   }
+
   .twin h4 {
     height: auto;
+  }
+
+  .twin ul {
+    padding-left: 0;
   }
 
   .fordele_wrapper .container {
