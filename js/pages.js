@@ -86,7 +86,7 @@ hideLoader();
 
     fqaList.forEach((object)=>{
         const clon = template.cloneNode(true).content;
-        clon.querySelector(".fqa-h2").textContent = object.question;
+        clon.querySelector(".fqa-header").textContent = object.question;
         clon.querySelector(".fqa-p").innerHTML = object.answer;
         fqaWrapper.appendChild(clon);
     })
@@ -101,21 +101,28 @@ hideLoader();
     hideLoader();
  }
 
+ function getOmMig(data){
+    console.log("om mig data is: ", data);
+ }
 
  function submitForm(){  
  const form = document.querySelector("form");
-     form.addEventListener("submit", (e)=>{
-         e.preventDefault();
-         document.querySelector("#name").value = " ";
-         document.querySelector("#firma").value = " ";
-         document.querySelector("#email").value = " ";
-         document.querySelector("#message").value = " ";
- 
-         if(document.querySelector("#stilling")){
-            document.querySelector("#stilling").value = " "; 
-         }
-         displayPopup();
-     })
+
+ if(form !== null){
+    form.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        document.querySelector("#name").value = " ";
+        document.querySelector("#firma").value = " ";
+        document.querySelector("#email").value = " ";
+        document.querySelector("#message").value = " ";
+
+        if(document.querySelector("#stilling")){
+           document.querySelector("#stilling").value = " "; 
+        }
+        displayPopup();
+    })
+ }
+
  }
 
  function displayPopup(){
