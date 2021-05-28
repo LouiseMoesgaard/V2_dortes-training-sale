@@ -122,5 +122,7 @@ form {
     background-color: var(--body-color);
     color: var(--text-dark);
     padding: var(--padding-inline-mobil);
+    font-size: 0.8rem;
+    line-height: 26px;
   }
 }

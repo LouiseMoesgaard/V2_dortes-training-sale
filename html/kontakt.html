@@ -47,9 +47,48 @@
         </div>
     </div>
 
-  
     <div class="kontakt_content container m_top_page">
-        <main></main>
+        <main>
+            <div class="contact_wrapper container">
+                <h1 class="h1_line kontakt_header"></h1>
+                <div class="kontakt_grid">
+                    <div class="text kontakt_text"></div>
+                    <div class="mail kontakt_info"></div>
+                </div>
+                <section class="form">
+                    <form action="">
+                        <div class="name">
+                            <label for="name">navn</label>
+                            <br>
+                            <input id="name" name="name" required="" type="text">
+                        </div>
+                        <div class="stilling">
+                            <label for="stilling">stilling</label>
+                            <br>
+                            <input id="stilling" name="stilling" required="" type="text">
+                        </div>
+                        <div class="firma">
+                            <label for="firma">virksomhedsnav</label>
+                            <br>
+                            <input id="firma" name="firma" required="" type="text">
+                        </div>
+                        <div class="email">
+                            <label for="email">email</label>
+                            <br>
+                            <input id="email" name="email" required="" type="email">
+                        </div>
+                        <div class="message">
+                            <label for="message">besked</label>
+                            <br>
+                            <textarea id="message" cols="30" name="message" required="" rows="10"> </textarea>
+                        </div>
+                        <div class="send_button">
+                            <button class="primary-button">Send</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
     </div>
 
     <footer>
@@ -80,7 +119,8 @@
 
     <script src="/js/pages.js"></script>
     <script>
-        window.addEventListener("load", getPost("posts/297", displayPost));
+        // window.addEventListener("load", getPost("posts/297", displayPost));
+        window.addEventListener("load", getPost("kontakt", getKontakt));
     </script>
   <script src="/js/nav.js"></script>
 </body>

@@ -117,18 +117,18 @@ function getFirmaaftale(data){
 }
 
 function getOmMig(data){
-    const page = data[0];
-    document.querySelector(".om_mig_header").textContent = page.om_mig_header;
-    document.querySelector(".om_mig_text").innerHTML = page.om_mig_text;
-    document.querySelector(".om_mig_img").src = page.om_mig_img.guid;
-    document.querySelector(".om_mig_cta").textContent = page.om_mig_cta;
-    document.querySelector(".values_header").textContent = page.values_header;
-    document.querySelector(".values_img").src = page.values_img.guid;
-    document.querySelector(".values_text").innerHTML = page.values_text;
-    document.querySelector(".values_list").innerHTML = page.values_list;
-    document.querySelector(".cv_header").textContent = page.cv_header;
-    document.querySelector(".cv_text").innerHTML = page.cv_text;
-    document.querySelector(".cv_list").innerHTML = page.cv_list;
+    const content = data[0];
+    document.querySelector(".om_mig_header").textContent = content.om_mig_header;
+    document.querySelector(".om_mig_text").innerHTML = content.om_mig_text;
+    document.querySelector(".om_mig_img").src = content.om_mig_img.guid;
+    document.querySelector(".om_mig_cta").textContent = content.om_mig_cta;
+    document.querySelector(".values_header").textContent = content.values_header;
+    document.querySelector(".values_img").src = content.values_img.guid;
+    document.querySelector(".values_text").innerHTML = content.values_text;
+    document.querySelector(".values_list").innerHTML = content.values_list;
+    document.querySelector(".cv_header").textContent = content.cv_header;
+    document.querySelector(".cv_text").innerHTML = content.cv_text;
+    document.querySelector(".cv_list").innerHTML = content.cv_list;
 
     hideLoader();
 
@@ -151,6 +151,16 @@ function getFqaList(fqaList){
             elm.classList.toggle("fqa-collapse");
         })
     })
+
+    hideLoader();
+}
+
+function getKontakt(data){
+    const content = data[0];
+    console.log("kontakt is: ", content);
+    document.querySelector(".kontakt_header").textContent = content.kontakt_header;
+    document.querySelector(".kontakt_text").innerHTML = content.kontakt_text;
+    document.querySelector(".kontakt_info").innerHTML = content.kontakt_info;
 
     hideLoader();
 }

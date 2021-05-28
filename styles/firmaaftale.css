@@ -194,4 +194,10 @@
   .fordele_wrapper .h2_bg {
     display: none;
   }
+
+  .contact_wrapper {
+    font-size: 0.8rem;
+    line-height: 26px;
+    padding: var(--padding-inline-mobil);
+  }
 }
