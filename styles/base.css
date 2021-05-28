@@ -242,6 +242,30 @@ button {
   overflow: hidden;
 }
 
+.breadCrumbs{
+  margin-bottom: 13.4px;
+}
+
+.breadCrumbs div {
+  display: inline-block;
+}
+
+.breadCrumbs svg {
+  height:10px;
+  width: 10px;
+  fill: var(--primary-color);
+}
+
+.breadCrumbs a {
+  text-decoration: none;
+  color: var(--border-color-grey);
+
+}
+
+.breadCrumbs a.link{
+  color: var(--text-dark);
+}
+
 .loader_wrapper {
   position: absolute;
   width: 100vw;
