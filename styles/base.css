@@ -8,7 +8,7 @@
   --header-font: "Merriweather", serif;
   --body-font: "Raleway", sans-serif;
   --body-font-size: 0.9rem;
-  --text-white: #fff;
+  --text-white: #fef5f4;
   --text-dark: #45494b;
   --line-height-h2: 36px;
   --border-color-grey: #c6cdcd;
@@ -29,6 +29,7 @@ body {
 
 img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -72,13 +73,15 @@ p {
   font-weight: lighter;
 }
 
+.copyright span{
+  font-size: 0.7rem;
+}
+
 @media screen and (max-width: 450px) {
   .h1_line {
     padding: var(--padding-inline-mobil);
     margin-bottom: 0;
     width: 90%;
-    font-size: 18px;
-    line-height: 30px;
   }
 
   h2 {
@@ -96,12 +99,15 @@ ul li::marker {
   list-style: none;
 }
 .li_dot li::before {
-  content: "xx";
+  content: "bb";
   color: transparent;
   background-color: var(--li-marker-color);
-  margin-right: 8px;
   border-radius: 50%;
-  font-size: 10px;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Buttons */
@@ -166,16 +172,25 @@ form label {
   .container {
     max-width: 700px;
   }
+  .m_top_page {
+    margin-top: 113px!important;
+  }
 }
 @media screen and (max-width: 700px) {
   .container {
     max-width: 600px;
+  }
+  .m_top_page {
+    margin-top: 113px!important;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container {
     max-width: 500px;
+  }
+  .m_top_page {
+    margin-top: 113px!important;
   }
 }
 
@@ -185,7 +200,7 @@ form label {
   }
 
   .m_top_page {
-    margin-top: 10vh;
+    margin-top: 113px!important;
   }
 }
 
@@ -203,7 +218,7 @@ form label {
 /* temporal css */
 
 .m_top_page {
-  margin-top: 16vh;
+  margin-top: 133px;
 }
 
 @media screen and (max-width: 450px) {
@@ -267,6 +282,7 @@ form label {
 .breadCrumbs svg {
   height:10px;
   width: 10px;
+  margin: 0 5px;
   fill: var(--primary-color);
 }
 
@@ -278,6 +294,12 @@ form label {
 
 .breadCrumbs a.link{
   color: var(--text-dark);
+}
+
+.breadCrumbs a.link span{
+  font-size: 13.333px;
+  line-height: initial;
+  font-family: 'merriweather';
 }
 
 .loader_wrapper {

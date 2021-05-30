@@ -44,11 +44,17 @@
   padding: 30px;
 }
 
+.trainings_wrapper article button:not(:last-child) {
+  margin: 20px 0;
+
+}
+
 .trainings_wrapper article button {
   margin-top: 20px;
   width: 100%;
   font-size: 14px;
 }
+
 
 .row {
   background: var(--secondary-color);
@@ -137,15 +143,17 @@
   color: transparent;
   background-color: var(--li-marker-color);
   border-radius: 50%;
-  margin-right: 6px;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.list_wrapper ul li::before {
-  content: "bb";
-  color: transparent;
-  background-color: var(--li-marker-color);
-  border-radius: 50%;
-  margin-right: 6px;
+@media screen and (max-width: 850px) {
+  .trainings_wrapper article {
+    padding: 12px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -219,6 +227,7 @@
 
   .trainings_wrapper {
     grid-template-columns: auto;
+    grid-gap: 50px;
     margin-top: 2vh;
   }
 

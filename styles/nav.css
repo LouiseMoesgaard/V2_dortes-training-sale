@@ -67,7 +67,7 @@ nav .menu a {
     text-decoration: none;
 }
 nav .menu .active {
-    border-bottom: 3px solid;  
+    border-bottom: 2px solid;  
     line-height: 50px;         
     border-image: linear-gradient(to right, transparent 10%, #fd9c50 10%) 2;
 }
@@ -81,7 +81,7 @@ nav .menu.desktop {
     vertical-align: top;
 }
 nav .menu.desktop .active {
-    border-bottom: 3px solid;  
+    border-bottom: 2px solid;  
     line-height: 35px;         
     border-image: linear-gradient(to right, transparent 10%, #fd9c50 10%) 2;
 }

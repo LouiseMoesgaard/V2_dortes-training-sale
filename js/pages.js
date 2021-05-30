@@ -64,7 +64,7 @@ trainings.forEach((object) =>{
         const clon = template.cloneNode(true).content;
         const breadcrumbLink = document.createElement('a');
         breadcrumbLink.setAttribute('href', `/html/singleview.html?id=${object.id}`)
-        breadcrumbLink.innerText = object.training_title;
+        breadcrumbLink.innerText = object.training_title.toUpperCase();
         clon.querySelector('.breadCrumbs').appendChild(breadcrumbLink)
         clon.querySelector(".h1_line").textContent = object.training_title;
         // clon.querySelector(".sm-txt").textContent = object.short_text;

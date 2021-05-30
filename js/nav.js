@@ -39,7 +39,9 @@ function setActive() {
             navItem = item;
         }
     });
-    if(!navItem){
+    if(!navItem && window.location.pathname === '/html/singleview.html'){
+        navItem = navItems[1];
+    } else if(!navItem) {
         navItem = navItems[0];
     }
     navItem.classList.add('active');

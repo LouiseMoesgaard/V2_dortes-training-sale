@@ -34,6 +34,10 @@
   text-align: center;
 }
 
+p.price_number {
+  font-size: 2.3rem;
+}
+
 .twin {
   padding-inline: 20px;
   width: 100%;
