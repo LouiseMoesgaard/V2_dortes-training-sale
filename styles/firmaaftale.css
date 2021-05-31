@@ -55,6 +55,7 @@ p.price_number {
 .price_name {
   background-color: #96cbcd;
   padding: 30px;
+  color: var(--text-white);
 }
 
 .twin:nth-child(2) .price_name {

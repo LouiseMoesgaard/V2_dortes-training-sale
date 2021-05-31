@@ -97,7 +97,9 @@ ul li::marker {
 
 .li_dot li {
   list-style: none;
+  padding-left: 25px;
 }
+
 .li_dot li::before {
   content: "bb";
   color: transparent;
@@ -108,6 +110,7 @@ ul li::marker {
   height: 10px;
   display: inline-block;
   vertical-align: middle;
+  margin-left: -20px;
 }
 
 /* Buttons */

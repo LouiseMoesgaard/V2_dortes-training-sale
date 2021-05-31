@@ -52,9 +52,18 @@
             <button class="primary-button cta_home"></button>
         </div>
         <h2 class="subtitle_mobil"></h2>
+
+        <span class="scroll-btn">
+            <a href="#scroll-target">
+              <span class="mouse">
+                <span>
+                </span>
+              </span>
+            </a>
+          </span>
         
         
-        <div class="trainings_wrapper container"></div>
+        <div id="scroll-target" class="trainings_wrapper container"></div>
         
         
         
@@ -126,6 +135,11 @@
   <script src="js/carousel.js"></script>
   <script>
       getAllEndpoints(["home", "reference", "training"], getHomeContent);
+        if(( ( window.innerWidth <= 812 ) && ( window.innerHeight <= 1024 ) )) {
+            document.querySelector(".scroll-btn").classList.add('hide')
+        } else {
+            document.querySelector(".scroll-btn").classList.remove('hide')
+        }
   </script>
 </body>
 </html>

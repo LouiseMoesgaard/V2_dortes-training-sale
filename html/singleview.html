@@ -43,12 +43,12 @@
         <div class="loader"></div>
     </div>
 
-    <div class="overlay hide">
+    <!-- <div class="overlay hide">
         <div class="form_modal hide">
             <span class="m_close"></span>
             <h3 class="m_text">Din besked er blevet sendt</h3>
         </div>
-    </div>
+    </div> -->
 
     <div class="training_content container m_top_page">
         <main></main>
@@ -80,19 +80,19 @@
             <form action="">
                 <div class="name">
                     <label for="name">navn</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                 </div>
                 <div class="firma">
                     <label for="firma">virksomhed</label>
-                    <input type="text" name="firma" id="firma">
+                    <input type="text" name="firma" id="firma" required>
                 </div>
                 <div class="email">
                     <label for="email">email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="message">
                     <label for="message">besked</label>
-                    <textarea name="message" id="message" cols="30" rows="6"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="6" required></textarea>
                 </div>
                 <div class="send_button">
                     <button class="primary-button">Send</button>

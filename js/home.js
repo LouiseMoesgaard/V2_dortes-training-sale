@@ -2,6 +2,12 @@
 let references = null;
 window.addEventListener("load", fetchData);
 // window.addEventListener("load",  getAllEndpoints(["home", "reference", "training"], getHomeContent));
+console.log(window.innerHeight, window.innerWidth)
+if(( ( window.innerWidth <= 812 ) && ( window.innerHeight <= 1024 ) )) {
+    document.querySelector(".scroll-btn").classList.add('hide')
+} else {
+    document.querySelector(".scroll-btn").classList.remove('hide')
+}
 
 const url = "https://ariadna.dk/kea/Dortes-Training/wp/wp-json/wp/v2/";
 

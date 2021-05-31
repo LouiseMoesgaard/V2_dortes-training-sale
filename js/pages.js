@@ -132,6 +132,10 @@ function getOmMig(data){
 
     hideLoader();
 
+    document.querySelector(".om_mig_cta").addEventListener("click", ()=>{
+        window.location= "/html/kontakt.html";
+    })
+
 }
 
 function getFqaList(fqaList){

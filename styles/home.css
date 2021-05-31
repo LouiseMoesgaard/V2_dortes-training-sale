@@ -21,6 +21,8 @@
 .subtitle_desktop {
   color: var(--text-white);
   border: none;
+  animation: slideIn 2s forwards;
+
 }
 
 .title_mobil,
@@ -54,7 +56,6 @@
   width: 100%;
   font-size: 14px;
 }
-
 
 .row {
   background: var(--secondary-color);
@@ -147,7 +148,33 @@
   width: 10px;
   height: 10px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-top;
+}
+
+.scroll-btn .mouse {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 50px;
+  margin: 20px auto 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-color);
+  border-radius: 23px;
+}
+
+.scroll-btn .mouse > * {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: var(--li-marker-color);
+  border-radius: 50%;
+  animation: ani-mouse 2.5s linear infinite;
 }
 
 @media screen and (max-width: 850px) {
@@ -266,6 +293,15 @@
   animation-duration: 0.5s;
 }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideLeftNFadeOut {
   from {
     opacity: 1;
@@ -276,6 +312,7 @@
     transform: translateX(-250px);
   }
 }
+
 @keyframes slideLeftNFadeIn {
   from {
     opacity: 0;
@@ -325,6 +362,7 @@
   animation-duration: 0.5s;
 }
 
+
 @keyframes slideLeftNFadeOut {
   from {
     opacity: 1;
@@ -356,6 +394,7 @@
     transform: translateX(250px);
   }
 }
+
 @keyframes slideRightNFadeIn {
   from {
     opacity: 0;
@@ -364,5 +403,24 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+  opacity: 1;
+  top: 29%;
+  }
+  15% {
+  opacity: 1;
+  top: 50%;
+  }
+  50% {
+  opacity: 0;
+  top: 50%;
+  }
+  100% {
+  opacity: 0;
+  top: 29%;
   }
 }
