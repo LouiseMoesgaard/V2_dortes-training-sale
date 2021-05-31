@@ -44,6 +44,7 @@ button {
   font-family: var(--header-font);
   font-weight: lighter;
   letter-spacing: 2px;
+  
 }
 
 p,
@@ -67,6 +68,7 @@ h2,
   width: fit-content;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, transparent 10%, #fd9c50 10%) 2;
+  width: -moz-fit-content;
 }
 
 p {
