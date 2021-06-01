@@ -7,7 +7,7 @@
 .fqa-item {
   cursor: pointer;
   border: 2px solid var(--border-color-grey);
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .fqa-header {
