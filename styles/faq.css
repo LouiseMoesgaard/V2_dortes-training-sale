@@ -7,9 +7,7 @@
 .fqa-item {
   cursor: pointer;
   border: 2px solid var(--border-color-grey);
-  margin-bottom: 3em;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .fqa-header {
@@ -35,18 +33,17 @@
 }
 
 .item-triangle {
-  display: flex;
+  display: grid;
+  grid-template-columns: 80% 20%;
   width: 100%;
-  justify-content: space-between;
-  height: 65px;
 }
 .triangle {
   background-image: url(/media/fqa-triangle-collapse.svg);
   width: 4rem;
   background-repeat: no-repeat;
-  display: flex;
   margin-top: 24px;
   margin-right: 20px;
+  justify-self: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -54,32 +51,45 @@
     width: 90%;
     margin-top: 8vh;
   }
+
+  .fqa-header {
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .h1_line {
+    margin-top: 70px;
+  }
+
   .fqa-item {
-    padding-inline: 12px;
+    padding-inline: 10px;
+  }
+
+  .item-triangle {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    width: 100%;
   }
 
   .fqa-header {
     margin-left: 0;
+    font-size: 0.8rem;
+    line-height: 20px;
   }
 
   .fqa-p,
   .fqa-p p {
-    margin-block: inherit;
     width: 100%;
   }
 
   .fqa-collapse .triangle {
     margin-top: 20px;
-  }
-
-  .item-triangle {
-    height: 45px;
+    height: 18px;
   }
 
   .triangle {
     margin-right: -6px;
+    height: 18px;
   }
 }

@@ -45,7 +45,6 @@
   background-color: var(--footer-color);
   padding-inline: 30px;
   color: var(--text-white);
-  /* margin-bottom: 4vh; */
 }
 
 .values_wrapper li {
@@ -85,6 +84,10 @@
   .col_2 .div_text {
     padding: 0;
     margin-top: -50px;
+  }
+
+  .col_2 .div_img {
+    margin-bottom: 40px;
   }
 
   .cv_wrapper {

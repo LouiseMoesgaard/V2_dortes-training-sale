@@ -3,6 +3,10 @@
 let references = null;
 const id = new URLSearchParams(window.location.search).get("id");
 const url = "https://ariadna.dk/kea/Dortes-Training/wp/wp-json/wp/v2/";
+document.querySelector("nav .logo").addEventListener("click", ()=>{
+    location.href = "/"; 
+})
+
 
 function getPost(endpoint, callback){
     fetch(url + endpoint)
@@ -161,12 +165,12 @@ function getFqaList(fqaList){
 
 function getKontakt(data){
     const content = data[0];
-    console.log("kontakt is: ", content);
     document.querySelector(".kontakt_header").textContent = content.kontakt_header;
     document.querySelector(".kontakt_text").innerHTML = content.kontakt_text;
     document.querySelector(".kontakt_info").innerHTML = content.kontakt_info;
 
     hideLoader();
+    submitForm();
 }
 
 function submitForm(){  
@@ -219,7 +223,7 @@ function getHomeContent(data){
     references = data[1];
     displayTrainings(data[2]);
     initializeCarousel();
-    hideLoader();
+    // hideLoader();
 }
 
 function displayHome(data){
@@ -235,7 +239,8 @@ function displayHome(data){
 
     document.querySelector(".cta_home").addEventListener("click", ()=>{
         window.location= "/html/firmaaftale.html";
-    })
+    })    
+    hideLoader();
 }
 
 function displayReference(object){
@@ -264,3 +269,6 @@ trainings.forEach((object) =>{
     trainingsWrapper.appendChild(clon);
 })
 }
+
+
+

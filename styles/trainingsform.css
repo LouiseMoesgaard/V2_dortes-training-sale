@@ -93,3 +93,9 @@ article * {
     margin-block: 20px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .h1_line {
+    margin-top: 70px;
+  }
+}

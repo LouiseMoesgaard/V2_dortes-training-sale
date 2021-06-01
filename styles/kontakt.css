@@ -58,11 +58,6 @@ form {
   margin-bottom: 16px;
 }
 
-/* .form div:last-child {
-  display: grid;
-  justify-content: flex-end;
-} */
-
 .form label {
   margin-bottom: 6px;
 }
@@ -77,11 +72,13 @@ form {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .kontakt_grid {
     grid-template-columns: auto;
   }
+}
 
+@media screen and (max-width: 600px) {
   form {
     display: flex;
     flex-direction: column;
