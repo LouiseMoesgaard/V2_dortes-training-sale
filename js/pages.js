@@ -41,7 +41,7 @@ trainings.forEach((object) =>{
     clon.querySelector("h2").textContent = object.training_title;
     clon.querySelector("p").textContent = object.short_text;
     clon.querySelector("img").src = object.image_home.guid;
-    clon.querySelector("img").alt = object.image_home.post_name;
+    clon.querySelector("img").alt = object.image_home.post_title;
 
     clon.querySelectorAll("button").forEach((button) =>{
         button.textContent = "Læs mere";
@@ -76,17 +76,17 @@ trainings.forEach((object) =>{
         clon.querySelector(".img1").src = object.image_home.guid;
         clon.querySelector(".img2").src = object.image_2.guid;
         clon.querySelector(".img3").src = object.image_3.guid;
-        clon.querySelector(".img1").alt = object.image_home.post_name;
-        clon.querySelector(".img2").alt = object.image_2.post_name;
-        clon.querySelector(".img3").alt = object.image_3.post_name;
+        clon.querySelector(".img1").alt = object.image_home.post_title;
+        clon.querySelector(".img2").alt = object.image_2.post_title;
+        clon.querySelector(".img3").alt = object.image_3.post_title;
         trainingsWrapper.appendChild(clon);
 
         document.querySelector(".carousel-item .img1").src = object.image_home.guid;
         document.querySelector(".carousel-item .img2").src = object.image_2.guid;
         document.querySelector(".carousel-item .img3").src = object.image_3.guid;
-        document.querySelector(".carousel-item .img1").alt = object.image_home.post_name;
-        document.querySelector(".carousel-item .img2").alt = object.image_2.post_name;
-        document.querySelector(".carousel-item .img3").alt = object.image_3.post_name;
+        document.querySelector(".carousel-item .img1").alt = object.image_home.post_title;
+        document.querySelector(".carousel-item .img2").alt = object.image_2.post_title;
+        document.querySelector(".carousel-item .img3").alt = object.image_3.post_title;
 
     }
 }) 
@@ -101,7 +101,7 @@ function getFirmaaftale(data){
     document.querySelector(".page_header").textContent = content.page_header;
     document.querySelector(".firma_text").innerHTML = content.firma_text;
     document.querySelector(".firma_img").src = content.firma_img.guid;
-    document.querySelector(".firma_img").alt = content.firma_img.post_name;
+    document.querySelector(".firma_img").alt = content.firma_img.post_title;
     document.querySelector(".contact_wrapper").innerHTML = content.kontakt_info;
     document.querySelector(".fordele_header").textContent = content.fordele_header;
     document.querySelector(".fordele_col1_header").textContent = content.fordele_col1_header;
@@ -132,11 +132,11 @@ function getOmMig(data){
     document.querySelector(".om_mig_header").textContent = content.om_mig_header;
     document.querySelector(".om_mig_text").innerHTML = content.om_mig_text;
     document.querySelector(".om_mig_img").src = content.om_mig_img.guid;
-    document.querySelector(".om_mig_img").alt = content.om_mig_img.post_name;
+    document.querySelector(".om_mig_img").alt = content.om_mig_img.post_title;
     document.querySelector(".om_mig_cta").textContent = content.om_mig_cta;
     document.querySelector(".values_header").textContent = content.values_header;
     document.querySelector(".values_img").src = content.values_img.guid;
-    document.querySelector(".values_img").alt = content.values_img.post_name;
+    document.querySelector(".values_img").alt = content.values_img.post_title;
     document.querySelector(".values_text").innerHTML = content.values_text;
     document.querySelector(".values_list").innerHTML = content.values_list;
     document.querySelector(".cv_header").textContent = content.cv_header;
@@ -238,7 +238,7 @@ function getHomeContent(data){
 function displayHome(data){
     const splash = data[0];
     document.querySelector(".splah_img").src = splash.splash_img.guid;
-    document.querySelector(".splah_img").alt = splash.splash_img.post_name;
+    document.querySelector(".splah_img").alt = splash.splash_img.post_title;
     document.querySelector(".title_desktop").textContent = splash.main_title;
     document.querySelector(".title_mobil").textContent = splash.main_title;
     document.querySelector(".subtitle_desktop").textContent = splash.main_subtitle;
@@ -272,7 +272,7 @@ const template = document.querySelector(".trainings_template");
 trainings.forEach((object) =>{
     const clon = template.cloneNode(true).content;
     clon.querySelector("img").src = object.image_home.guid;
-    clon.querySelector("img").alt = object.image_home.post_name;
+    clon.querySelector("img").alt = object.image_home.post_title;
     clon.querySelector("button").textContent = object.cta;
     clon.querySelector("button").addEventListener("click", ()=>{
         location.href = "/html/singleview.html?id=" + object.id;
